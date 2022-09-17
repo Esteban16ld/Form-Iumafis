@@ -1,0 +1,44 @@
+<section class="py-5">
+  <div class="container px-5">
+    <!-- registration form-->
+    <div class="color-divAzul rounded-3 py-5 px-4 px-md-5 mb-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <form [formGroup]="userForm">
+            <!-- Name input-->
+            <div class="form-floating mb-3">
+              <label for="name">Nombre Completo</label>
+              <input class="form-control" placeholder="Nombre..." type="text" formControlName="nombre" />
+            </div>
+            <!-- address input-->
+            <div class="form-floating mb-3">
+              <label for="email">Dirección </label>
+              <input class="form-control" type="text" placeholder="Dirección..." formControlName="direccion" />
+            </div>
+            <!-- Phone -->
+            <div class="form-floating mb-3">
+              <label for="phone">Telefono</label>
+              <input class="form-control" type="number" placeholder="Telefono..." formControlName="telefono" />
+            </div>
+            <!-- Exito envio  -->
+            <div class="row">
+              <div class="col-md-6">
+                <button class="btn btn-primary btn-lg active" type="submit" (click)="registerUser()">
+                  Enviar
+                </button>
+              </div>
+              <div style="padding-left: 110px;" class="col-md-6">
+                <button class="btn btn-primary btn-lg active" type="submit" (click)="generateData()"
+                  routerLink="/dashboard">
+                  Ver Datos
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
